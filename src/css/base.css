@@ -1,6 +1,146 @@
-:root{
-    --azul: #4498C7;
-    --azul-claro: #E8F2FB;
-    --azul-escuro: #3E5563;
-    --vermelho: #B6482D;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700&display=swap");
+
+:root {
+  --azul: #4498c7;
+  --azul-claro: #e8f2fb;
+  --azul-escuro: #3e5563;
+  --vermelho: #b6482d;
+}
+
+* {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.detalhes {
+  display: flex;
+  margin: 5px;
+}
+
+.titulo {
+  margin: 15px 0;
+  color: var(--azul);
+  font-weight: bolder;
+  font-size: 44px;
+}
+
+.titulo::before {
+  content: "";
+  background-color: var(--azul);
+  height: 50px;
+  width: 14px;
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+.linha-vertical {
+  background-color: var(--azul-claro);
+  height: 220px;
+  width: 10px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.capa {
+  max-width: 175px;
+  min-width: 175px;
+  max-height: 213px;
+  min-height: 213px;
+  border-radius: 10px;
+  background-color: var(--azul-claro);
+  margin: 5px;
+}
+
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 20px;
+}
+
+.detalhes-subtitulo {
+  color: var(--azul-escuro);
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.texto {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.cabecalho-titulo {
+  margin: 15px 0;
+  color: var(--vermelho);
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.cabecalho-titulo::before {
+  content: "";
+  background-color: var(--vermelho);
+  height: 50px;
+  width: 14px;
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+.criticas {
+  width: 95%;
+}
+
+.criticas-cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-add-vermelho {
+  border: 3px solid var(--vermelho);
+  border-radius: 10px;
+  background-color: white;
+  color: var(--vermelho);
+  font-weight: bold;
+  cursor: pointer;
+  width: 180px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add-vermelho > svg {
+  margin-right: 5px;
+}
+
+.critica {
+  background-color: var(--azul-claro);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.critica-username {
+  color: var(--azul);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.critica-data {
+  color: var(--azul);
+  font-size: 16px;
 }

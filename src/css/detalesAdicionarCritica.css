@@ -1,0 +1,17 @@
+.prg-opniao{
+    color: #198BCA;
+    font-size: 36px;
+}
+
+.txt-critica{
+    border-radius: 10px;
+    width: 80%;
+    height: 244px;
+}
+
+#area-adicao-critica{
+    width: 90%;
+    padding-left: 15%;
+    border-radius: 10px;
+    background-color: #E8F2FB;
+}

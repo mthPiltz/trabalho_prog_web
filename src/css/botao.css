@@ -18,3 +18,17 @@
 .btn-outline-vermelho > svg {
   margin-right: 5px;
 }
+
+.btn-enviar{
+  background-color: #198BCA;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  border:none;
+  border-radius: 10px;
+
+  width: 275px;
+  height: 69px;
+}
+

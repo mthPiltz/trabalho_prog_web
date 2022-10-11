@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <link rel="stylesheet" href="../src/css/base.css" />
+    <link rel="stylesheet" href="../src/css/titulo.css" />
+    <link rel="stylesheet" href="../src/css/botao.css" />
+    <link rel="stylesheet" href="../src/css/critica.css" />
+    <link rel="stylesheet" href="../src/css/detalhesLivro.css" />
+  </head>
+  <body>
+    <main>
+      <section class="livro">
+        <h1 class="titulo titulo-azul">TITULO LIVRO</h1>
+        <div class="detalhes">
+          <div class="capa"></div>
+          <div class="container-flex-column">
+            <p class="detalhes-subtitulo">Sinopse</p>
+            <p class="texto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              consequuntur ipsam similique voluptates perspiciatis eaque. Odit,
+              totam? Quidem aliquid, laboriosam ipsum hic, officiis sequi
+              nesciunt nisi ut distinctio officia consequuntur.
+            </p>
+          </div>
+          <div class="linha-vertical"></div>
+          <div class="container-flex-column">
+            <p class="detalhes-subtitulo">Outras informações</p>
+            <p class="texto">Autor:</p>
+            <p class="texto">Genero:</p>
+            <p class="texto">Quantidade de Páginas:</p>
+          </div>
+        </div>
+      </section>
+      <section class="criticas">
+        <div class="criticas-cabecalho">
+          <h2 class="criticas-cabecalho-titulo">CRITICAS</h2>
+          <button class="btn-outline-vermelho">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+              />
+            </svg>
+            ADICIONAR CRITICA
+          </button>
+        </div>
+        <div class="criticas-livro">
+          <div class="critica">
+            <p class="critica-username">UserName</p>
+            <p class="critica-data">dia/mes/ano</p>
+            <p class="critica-descricao texto">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione,
+              deserunt iure incidunt optio enim blanditiis explicabo possimus,
+              beatae excepturi rem tempora in dicta animi fuga suscipit saepe
+              inventore! Nemo, provident.
+            </p>
+          </div>
+          <div class="critica">
+            <p class="critica-username">UserName</p>
+            <p class="critica-data">dia/mes/ano</p>
+            <p class="critica-descricao texto">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione,
+              deserunt iure incidunt optio enim blanditiis explicabo possimus,
+              beatae excepturi rem tempora in dicta animi fuga suscipit saepe
+              inventore! Nemo, provident.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -11,12 +11,22 @@
     <link rel="stylesheet" href="../src/css/detalesAdicionarCritica.css">
 </head>
 <body>
-    <section>
+    <section id="adicionar-critica">
         <div>
             <h2 class="criticas-cabecalho-titulo">ADICIONAR CRITICA</h2>
           </div>
           <div id="area-adicao-critica">
-            <button class="btn-outline-vermelho">
+            <div>
+              <div class="barra-titulo">
+                <select name="tipo-critica" id="tipo-critica">
+                  <option value="Livro" id="option-livro">LIVRO</option>
+                </select>
+                <input type="text" id="titulo-livro" placeholder="Titulo livro">
+                <div id="img-input">
+                  <img src="../src/icons/input-AdicionarCritica.svg" alt="input">
+                </div>
+              </div>
+              <button class="btn-outline-vermelho">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -31,12 +41,11 @@
                 </svg>
                 ADICIONAR CRITICA
               </button>
-
-              <h3 class="prg-opniao">Escrava sua opnião:</h3>
+            </div>
+              
+              <h3 class="prg-opniao">Escreva sua opnião:</h3>
 
               <textarea name="opniao" class="txt-critica" placeholder="Descreva sua opnião aqui..." style="resize: none"></textarea>
-              <!-- <input class="txt-critica" type="text" placeholder="Descreva sua opnião aqui..." wrap="hard"> -->
-
               <button class="btn-enviar">Enviar</button>
           </div>
     </section>

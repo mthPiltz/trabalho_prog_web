@@ -7,11 +7,63 @@
     border-radius: 10px;
     width: 80%;
     height: 244px;
+    box-shadow: 2px 1px 1px #0000005b;
+}
+
+.barra-titulo{
+    width: 55%;
+    height: 46px;
+    padding: 0;
+    
+
+    border: 2px solid #4498C7;
+    border-radius: 10px;
+}
+
+#option-livro{
+    color: white;
+}
+
+#tipo-critica{
+    width: 20%;
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #4498C7;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #area-adicao-critica{
     width: 90%;
-    padding-left: 15%;
+    padding: 1px 0 0 15%;
     border-radius: 10px;
     background-color: #E8F2FB;
+}
+
+#adicionar-critica{
+    margin-left: 5%;
+}
+
+#titulo-livro{
+    background-color: transparent;
+    border: none;
+    color: #198BCA;
+    font-weight: bold;
+
+    width: 70%;
+}
+
+#titulo-livro:focus {
+    border: none;
+    outline: none;
+}
+
+#titulo-livro::placeholder{
+    color: #198BCA;
+}
+
+#img-input{
+    display: inline-block;
 }

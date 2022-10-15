@@ -6,7 +6,6 @@
   font-weight: bold;
   cursor: pointer;
 
-  width: 180px;
   height: 46px;
   margin: 15px 0;
 
@@ -27,8 +26,12 @@
   cursor: pointer;
   border:none;
   border-radius: 10px;
-
-  width: 275px;
+  padding: 10px 30px 10px 30px;
+  margin-left: 25%;
+  margin-top: 20px;
   height: 69px;
 }
 
+.btn-adicionar{
+  background-color: #E8F2FB;
+}

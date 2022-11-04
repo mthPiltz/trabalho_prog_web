@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="../src/css/detalhesLivro.css" />
   </head>
   <body>
+    <script type="module" src="../src/js/detalhesLivro.js" defer></script>
+
     <main>
       <section class="livro">
-        <h1 class="titulo titulo-azul">TITULO LIVRO</h1>
+        <h1 class="titulo titulo-azul" id="titulo">TITULO LIVRO</h1>
         <div class="detalhes">
           <div class="capa"></div>
           <div class="container-flex-column">
             <p class="detalhes-subtitulo">Sinopse</p>
-            <p class="texto">
+            <p class="texto" id="sinopse">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
               consequuntur ipsam similique voluptates perspiciatis eaque. Odit,
               totam? Quidem aliquid, laboriosam ipsum hic, officiis sequi
@@ -30,16 +32,16 @@
           <div class="linha-vertical"></div>
           <div class="container-flex-column">
             <p class="detalhes-subtitulo">Outras informações</p>
-            <p class="texto">Autor:</p>
-            <p class="texto">Genero:</p>
-            <p class="texto">Quantidade de Páginas:</p>
+            <p class="texto" id="autor">Autor:</p>
+            <p class="texto" id="genero">Genero:</p>
+            <p class="texto" id="quantidadePaginas">Quantidade de Páginas:</p>
           </div>
         </div>
       </section>
       <section class="criticas">
         <div class="criticas-cabecalho">
           <h2 class="criticas-cabecalho-titulo">CRITICAS</h2>
-          <button class="btn-outline-vermelho">
+          <button class="btn-outline-vermelho" id="adicionarCritica">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -55,27 +57,7 @@
             ADICIONAR CRITICA
           </button>
         </div>
-        <div class="criticas-livro">
-          <div class="critica">
-            <p class="critica-username">UserName</p>
-            <p class="critica-data">dia/mes/ano</p>
-            <p class="critica-descricao texto">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione,
-              deserunt iure incidunt optio enim blanditiis explicabo possimus,
-              beatae excepturi rem tempora in dicta animi fuga suscipit saepe
-              inventore! Nemo, provident.
-            </p>
-          </div>
-          <div class="critica">
-            <p class="critica-username">UserName</p>
-            <p class="critica-data">dia/mes/ano</p>
-            <p class="critica-descricao texto">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione,
-              deserunt iure incidunt optio enim blanditiis explicabo possimus,
-              beatae excepturi rem tempora in dicta animi fuga suscipit saepe
-              inventore! Nemo, provident.
-            </p>
-          </div>
+        <div class="criticas-livro" id="criticas-livro"></div>
         </div>
       </section>
     </main>

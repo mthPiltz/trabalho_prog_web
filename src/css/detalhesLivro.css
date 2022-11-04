@@ -62,7 +62,10 @@
   }
 
   .criticas {
+    display: inline-block;
     width: 95%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .criticas-cabecalho {

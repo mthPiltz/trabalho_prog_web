@@ -19,7 +19,7 @@ function obterIdLivro() {
 
 async function preencherDadosLivro(idLivro) {
     const livro = await buscarLivro(idLivro);
-
+    document.getElementById('banner').src = livro.banner;
     document.getElementById('titulo').textContent = livro.titulo;
     document.getElementById('sinopse').textContent = livro.sinopse;
     document.getElementById('autor').textContent = livro.autor;

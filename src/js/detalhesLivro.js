@@ -22,9 +22,9 @@ async function preencherDadosLivro(idLivro) {
     document.getElementById('banner').src = livro.banner;
     document.getElementById('titulo').textContent = livro.titulo;
     document.getElementById('sinopse').textContent = livro.sinopse;
-    document.getElementById('autor').textContent = livro.autor;
-    document.getElementById('genero').textContent = livro.genero;
-    document.getElementById('quantidadePaginas').textContent = livro.quantidadePaginas;
+    document.getElementById('autor').textContent = "Autor: " + livro.autor;
+    document.getElementById('genero').textContent = "Genero: " + livro.genero;
+    document.getElementById('quantidadePaginas').textContent = "Quantidade de páginas: " + livro.quantidadePaginas;
 
     preencherDadosCritica(idLivro);
 }

@@ -47,7 +47,7 @@
   }
   .linha-vertical {
     background-color: var(--azul-claro);
-    height: 220px;
+    height: 20rem;
     width: 10px;
     display: inline-block;
     margin: 0 10px;

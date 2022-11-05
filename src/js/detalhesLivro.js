@@ -1,7 +1,10 @@
-import { buscarLivro, buscarCriticasLivro } from "../../firebase.js";
+import { buscarLivro } from "../js/repositorioLivro.js";
+import { buscarCriticasLivro } from "../js/repositorioCritica.js";
 
 var idLivro = obterIdLivro();
 preencherDadosLivro(idLivro);
+
+
 document.getElementById("adicionarCritica").addEventListener('click', () => {
     window.location.href = "adicionarCritica.html?idLivro=" + idLivro;
 });
@@ -11,7 +14,6 @@ function obterIdLivro() {
     // example url: http://127.0.0.1:5500/templates/detalhesLivro.html?idLivro=zAe2KrUkM7T3XlZJNW3F
     const urlParams = new URLSearchParams(window.location.search);
     const idLivro = urlParams.get('idLivro')
-
     return idLivro;
 }
 
@@ -29,18 +31,22 @@ async function preencherDadosLivro(idLivro) {
 
 async function preencherDadosCritica(livro) {
     var criticas = await buscarCriticasLivro(livro);
-
-    criticas.forEach((doc) => {
-        var critica = doc.data()
-        criarCriticaHTML(critica);
-    });
+    if (criticas.length == 0) {
+        var container = document.getElementById('criticas-livro');
+        container.innerHTML = "<span class='alerta'> Não há criticas para esse livro </span>"
+    }
+    else {
+        criticas.forEach((critica) => {
+            criarCriticaHTML(critica);
+        });
+    }
 }
 
 function criarCriticaHTML(critica) {
     var container = document.getElementById('criticas-livro');
     var criticaDiv = `
         <div class='critica'> 
-            <p  class='critica-username' id='username'>${critica.userName}</p>
+            <p  class='critica-username' id='username'>${critica.username}</p>
             <p class='critica-data' id='data'>${critica.data}</p>
             <p class='critica-descricao texto' id='criticaDescricao'>${critica.critica}</p>
         </div>`

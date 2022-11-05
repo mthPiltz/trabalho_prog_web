@@ -7,8 +7,10 @@
     <title>Minha Crítica</title>
     <link rel="stylesheet" href="../src/css/base.css" />
     <link rel="stylesheet" href="../src/css/adicionarCritica.css">
-</head>
-<body>
+  </head>
+  <body>
+  <script type="module" src="../src/js/adicionarCritica.js" defer></script>
+
   <header class="cabecalho">
     <nav class="nav-bar">
       <a class="nav-titulo nav-link" href="listagemLivro.html"> Minha Critica </a>
@@ -36,7 +38,7 @@
                 </select>
                 
               </div>
-              <button class="btn-outline-vermelho btn-adicionar">
+              <button id="btn-cadastro-livro" class="btn-outline-vermelho btn-adicionar">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -52,13 +54,18 @@
                 ADICIONAR
               </button>
             </div>
-              
-              <p class="prg-opniao">Escreva sua opinião:</p>
+              <form>
+                
+                <input id="userName" class="form-critica" type="text" placeholder="*Qual seu nome?">
 
-              <textarea name="opniao" class="txt-critica" placeholder="Descreva sua opinião aqui..." style="resize: none"></textarea>
-              
-              <button class="btn-enviar">Enviar</button>
+                <p class="prg-opniao">Escreva sua opinião:</p>
+                
+                <textarea id="critica" name="opniao" class="txt-critica" placeholder="*Descreva sua opinião aqui..." style="resize: none"></textarea>
+                
+                <input class="btn-enviar" id="enviar" type="button" value="Enviar">
+              </form>
           </div>
     </section>
+
 </body>
 </html>

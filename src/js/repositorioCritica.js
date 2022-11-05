@@ -1,4 +1,4 @@
-import { doc, collection, query, where, getDocs, getDoc, setDoc } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+import { doc, collection, query, where, getDocs, getDoc, setDoc, updateDoc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
 
 import { inicializarFirebase } from './firebase.js'
 
@@ -40,9 +40,28 @@ criarCritica(
 )
 */
 
+
 export async function criarCritica(critica) {
     const criticas = doc(collection(db, "criticas"));
     await setDoc(criticas, critica);
+}
+
+
+
+/* Exemplo chamada editarCritica: 
+obs: pode se passar como segundo parametro os campos que vão ser modificados, não precisa passar todos
+editarCritica("7fMhTx5PzFDESWpFVAbu", {
+    "critica": "Muito legal!"
+})
+*/
+export async function editarCritica(idCritica, critica) {
+    const criticaRef = doc(db, "criticas", idCritica);
+    await updateDoc(criticaRef, critica);
+}
+
+// deletarCritica("cPLLx3r8ck9SpT9dep07");
+export async function deletarCritica(idCritica) {
+    await deleteDoc(doc(db, "criticas", idCritica));
 }
 
 function converterCriticaParaJSON(documento) {

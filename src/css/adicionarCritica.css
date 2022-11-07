@@ -2,6 +2,7 @@
   color: var(--azul);
   font-size: 24px;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .txt-critica {
@@ -13,7 +14,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 10px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .barra-titulo {
@@ -75,10 +76,11 @@
   color: var(--azul);
 }
 
-.form-critica{
+.form-critica {
   border: none;
-  border-radius: 10px;
-
-  margin: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 5px 0 10px 0;
   width: 80%;
+  height: 30px;
 }

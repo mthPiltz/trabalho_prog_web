@@ -8,7 +8,7 @@ export async function buscarTodos() {
     const querySnapshot = await getDocs(collection(db, "livros"));
     const livros = [];
     querySnapshot.forEach((doc) => {
-        livros.push(converterLivroParaJSON(doc.data()));
+        livros.push(converterLivroParaJSON(doc.id, doc.data()));
     });
 
     return livros;
@@ -17,7 +17,7 @@ export async function buscarTodos() {
 export async function buscarLivro(id) {
     const docRef = doc(db, 'livros', id);
     const docSnap = await getDoc(docRef).then(resultado => {
-        return converterLivroParaJSON(resultado.data());
+        return converterLivroParaJSON(resultado.id, resultado.data());
     }).catch(erro => {
         console.log(erro);
     });
@@ -28,9 +28,9 @@ export async function buscarPorTitulo(titulo) {
     const q = query(collection(db, "livros"), orderBy('titulo'), startAt(titulo), endAt(titulo + '\uf8ff'))
     const querySnapshot = await getDocs(q);
 
-    var livros = [];
+    let livros = [];
     querySnapshot.forEach((doc) => {
-        livros.push(converterLivroParaJSON(doc.data()))
+        livros.push(converterLivroParaJSON(doc.id, doc.data()))
     });
 
     return livros;
@@ -54,8 +54,9 @@ export async function criarLivro(livro) {
     await setDoc(livros, livro);
 }
 
-function converterLivroParaJSON(documento) {
+function converterLivroParaJSON(id, documento) {
     return {
+        "id": id,
         "titulo": documento.titulo,
         "genero": documento.genero,
         "quantidadePaginas": documento.quantidadePaginas,

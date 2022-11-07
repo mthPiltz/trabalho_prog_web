@@ -6,14 +6,14 @@ const db = inicializarFirebase();
 
 
 export async function buscarCriticasLivro(idLivro) {
-    var livro = doc(db, 'livros', idLivro);
+    let livro = doc(db, 'livros', idLivro);
     const q = query(collection(db, "criticas"), where("codigoLivro", "==", livro));
 
     const querySnapshot = await getDocs(q);
 
-    var criticasLivro = [];
+    let criticasLivro = [];
     querySnapshot.forEach((doc) => {
-        criticasLivro.push(converterCriticaParaJSON(doc.data()))
+        criticasLivro.push(converterCriticaParaJSON(doc.id, doc.data()))
     });
 
     return criticasLivro;
@@ -22,7 +22,7 @@ export async function buscarCriticasLivro(idLivro) {
 export async function buscarCritica(id) {
     const docRef = doc(db, 'criticas', id);
     const docSnap = await getDoc(docRef).then(resultado => {
-        return converterCriticaParaJSON(resultado.data());
+        return converterCriticaParaJSON(resultado.id, resultado.data());
     }).catch(erro => {
         console.log(erro);
     });
@@ -39,13 +39,10 @@ criarCritica(
     }
 )
 */
-
-
 export async function criarCritica(critica) {
     const criticas = doc(collection(db, "criticas"));
     await setDoc(criticas, critica);
 }
-
 
 
 /* Exemplo chamada editarCritica: 
@@ -64,8 +61,9 @@ export async function deletarCritica(idCritica) {
     await deleteDoc(doc(db, "criticas", idCritica));
 }
 
-function converterCriticaParaJSON(documento) {
+function converterCriticaParaJSON(id, documento) {
     return {
+        "id": id,
         "codigoLivro": documento.codigoLivro,
         "critica": documento.critica,
         "data": documento.data,

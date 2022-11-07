@@ -1,7 +1,7 @@
-import { buscarLivro } from "../js/repositorioLivro.js";
 import { buscarCriticasLivro } from "../js/repositorioCritica.js";
+import { buscarLivro } from "../js/repositorioLivro.js";
 
-var idLivro = obterIdLivro();
+let idLivro = obterIdLivro();
 preencherDadosLivro(idLivro);
 
 
@@ -30,9 +30,9 @@ async function preencherDadosLivro(idLivro) {
 }
 
 async function preencherDadosCritica(livro) {
-    var criticas = await buscarCriticasLivro(livro);
+    let criticas = await buscarCriticasLivro(livro);
     if (criticas.length == 0) {
-        var container = document.getElementById('criticas-livro');
+        let container = document.getElementById('criticas-livro');
         container.innerHTML = "<span class='alerta'> Não há criticas para esse livro </span>"
     }
     else {
@@ -43,8 +43,8 @@ async function preencherDadosCritica(livro) {
 }
 
 function criarCriticaHTML(critica) {
-    var container = document.getElementById('criticas-livro');
-    var criticaDiv = `
+    let container = document.getElementById('criticas-livro');
+    let criticaDiv = `
         <div class='critica'> 
             <p  class='critica-username' id='username'>${critica.username}</p>
             <p class='critica-data' id='data'>${critica.data}</p>

@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc, query, collection, getDocs, orderBy, startAt, endAt } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+import { doc, getDoc, setDoc, query, collection, getDocs, orderBy, startAt, endAt, where } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
 
 import { inicializarFirebase } from './firebase.js'
 
@@ -22,18 +22,6 @@ export async function buscarLivro(id) {
         console.log(erro);
     });
     return docSnap;
-}
-
-export async function buscarPorTitulo(titulo) {
-    const q = query(collection(db, "livros"), orderBy('titulo'), startAt(titulo), endAt(titulo + '\uf8ff'))
-    const querySnapshot = await getDocs(q);
-
-    let livros = [];
-    querySnapshot.forEach((doc) => {
-        livros.push(converterLivroParaJSON(doc.id, doc.data()))
-    });
-
-    return livros;
 }
 
 /* 

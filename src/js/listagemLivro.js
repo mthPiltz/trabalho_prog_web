@@ -1,4 +1,4 @@
-import { buscarTodos, buscarPorTitulo } from "../js/repositorioLivro.js";
+import { buscarTodos } from "../js/repositorioLivro.js";
 
 const listagem = document.getElementById("listagem");
 const search = document.getElementById("search");
@@ -6,7 +6,7 @@ const search = document.getElementById("search");
 var livros = await buscarTodos();
 listarLivros(livros);
 
-async function listarLivros (lista) {
+async function listarLivros(lista) {
     listagem.innerHTML = "";
     for (let livro of lista) {
         let div = document.createElement("a");
@@ -25,6 +25,6 @@ async function listarLivros (lista) {
 }
 
 search.oninput = async () => {
-    livros = await buscarPorTitulo(search.value);
-    listarLivros(livros);
+    let filtro = livros.filter(livro => livro.titulo.toLowerCase().includes(search.value.toLowerCase()));
+    listarLivros(filtro);
 }

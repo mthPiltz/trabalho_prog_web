@@ -56,6 +56,8 @@
     width: 150px;
     height: 216px;
     margin: 0 25px 0 0;
+    text-decoration: none;
+    color: black;
 }
 
 .list-item-image {
@@ -66,6 +68,7 @@
     border: none;
     outline: none;
     margin-bottom: 5px;
+    object-fit: cover;
 }
 
 .list-item-label {

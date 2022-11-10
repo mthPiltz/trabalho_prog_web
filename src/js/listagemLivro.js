@@ -28,3 +28,8 @@ search.oninput = async () => {
     let filtro = livros.filter(livro => livro.titulo.toLowerCase().includes(search.value.toLowerCase()));
     listarLivros(filtro);
 }
+
+const btnCadastroLivro = document.getElementById("btn-cadastro-livro");
+btnCadastroLivro.addEventListener('click', () => {
+    window.location.href = "adicionarLivro.html";
+})

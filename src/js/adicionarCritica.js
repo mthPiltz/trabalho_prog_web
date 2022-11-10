@@ -10,6 +10,7 @@ preencherTela();
 async function preencherTela() {
     if (idCritica != null) { //editar
         // mostrar informações da critica
+        document.getElementById("titulo").textContent = "EDITAR CRITICA";
         let criticaBanco = await buscarCritica(idCritica);
         document.getElementById('userName').value = criticaBanco.username;
         document.getElementById('critica').value = criticaBanco.critica;
@@ -35,13 +36,7 @@ function obterIdCritica() {
     return idCritica;
 }
 
-
-const btnCadastroLivro = document.getElementById("btn-cadastro-livro");
 const btnEnviar = document.getElementById("enviar");
-
-btnCadastroLivro.addEventListener('click', () => {
-    window.location.href = "adicionarLivro.html";
-})
 
 btnEnviar.addEventListener('click', async function () {
     let dadosCritica;

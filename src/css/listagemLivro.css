@@ -1,6 +1,7 @@
 .header {
     display: flex;
     margin: 0 0 36px 0;
+    gap: 20px;
 }
 
 .search-box {
@@ -13,7 +14,7 @@
     align-items: center;
 }
 
-.search-box-text {
+/* .search-box-text {
     height: 100%;
     background-color: var(--azul);
     color: white;
@@ -23,7 +24,7 @@
     align-items: center;
     font-weight: 800;
     border-radius: 0 10px 10px 0;
-}
+} */
 
 .search-box-icon {
     margin: 0 0 0 5px;

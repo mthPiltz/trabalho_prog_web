@@ -43,6 +43,9 @@ async function preencherDadosCritica(livro) {
         document.querySelectorAll('.delete').forEach(botao => {
             botao.addEventListener('click', () => { deletar(botao.id) })
         })
+        document.querySelectorAll('.edit').forEach(botao => {
+            botao.addEventListener('click', () => { editar(botao.id) })
+        })
     }
 }
 
@@ -54,6 +57,7 @@ async function deletar(idCritica) {
 }
 
 function editar(idCritica) {
+    idCritica = idCritica.replace('editar', '');
     window.location.href = "adicionarCritica.html?idLivro=" + idLivro + "&&idCritica=" + idCritica;
 }
 

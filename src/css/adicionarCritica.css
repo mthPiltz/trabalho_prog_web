@@ -63,7 +63,7 @@
   border: none;
   color: var(--azul);
   font-weight: bold;
-
+  padding: 10px;
   width: 75%;
 }
 

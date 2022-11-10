@@ -53,3 +53,9 @@ function converterLivroParaJSON(id, documento) {
         "banner": documento.banner,
     }
 }
+
+
+
+export async function buscarReferenciaLivro(idLivro) {
+    return doc(db, 'livros', idLivro);
+}

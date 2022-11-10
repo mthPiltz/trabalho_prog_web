@@ -35,10 +35,11 @@ criarCritica(
         "codigoLivro": doc(db, 'livros', "zAe2KrUkM7T3XlZJNW3F"),
         "critica": "Adorei",
         "data": "04/11/2022",
-        "username": "Mauricio",
+        "username": "Flor",
     }
 )
 */
+
 export async function criarCritica(critica) {
     const criticas = doc(collection(db, "criticas"));
     await setDoc(criticas, critica);

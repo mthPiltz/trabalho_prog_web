@@ -16,3 +16,28 @@
   color: var(--azul);
   font-size: 16px;
 }
+
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.btn-icon {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.edit {
+  color: var(--azul);
+  border: 2px solid var(--azul);
+}
+
+.delete {
+  color: var(--vermelho);
+  border: 2px solid var(--vermelho);
+}
